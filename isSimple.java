@@ -12,16 +12,17 @@ public class isSimple {
 
     //простое ли число
     public static boolean isPrime(int a){
-        boolean flag=false;
+
         for (int i=2; i<a;i++){
+
             if (a%i==0){
-                flag = true;
-                break;
+                return false;
             }
-                flag=false;
-        }
-        return flag;
+
+        }return true;
+
     }
+
 
     //количество простых чисел до переданного значения
     //вывод простых чисел до заданного значения
