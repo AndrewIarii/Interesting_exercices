@@ -25,27 +25,26 @@ public class ObhodMassivDiagonal {
 
         System.out.println("\nВывод по побочным диагоналям:");
 
-        for (int k=0; k<n; k++)
-        {
-            int sum=k;
+        for (int k = 0; k < n; k++) {
+            int sum = k;
             //при каждой внешней итерации проходим весь массив
             //выводя только элементы соответсвующие условию
-            for (i=0; i<n; i++)
-                for (j=0; j<n; j++)
-                    if (i+j==sum) System.out.print(" "+A[i][j]);//выводим элементы выше побочной диагонали и сама диагональ
+            for (i = 0; i < n; i++)
+                for (j = 0; j < n; j++)
+                    if (i + j == sum)
+                        System.out.print(" " + A[i][j]);//выводим элементы выше побочной диагонали и сама диагональ
         }
-        for (int k=1; k<n; k++)
-        {
+        for (int k = 1; k < n; k++) {
             //здесь сумма для проверки начинается с середины
             //поэтому изначально больше на n-1
-            int sum=n-1+k;
+            int sum = n - 1 + k;
 
-            for (i=0; i<n; i++)
-                for (j=0; j<n; j++)
-                    if (i+j==sum) System.out.print(" "+A[i][j]);//вывод побочной диагонали
+            for (i = 0; i < n; i++)
+                for (j = 0; j < n; j++)
+                    if (i + j == sum) System.out.print(" " + A[i][j]);//вывод побочной диагонали
         }
 
 
-
-    }}
+    }
+}
 

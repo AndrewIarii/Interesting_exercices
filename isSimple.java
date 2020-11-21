@@ -3,7 +3,7 @@ import java.util.List;
 
 public class isSimple {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
         System.out.println(isPrime(17));
 
@@ -11,36 +11,37 @@ public class isSimple {
     }
 
     //простое ли число
-    public static boolean isPrime(int a){
+    public static boolean isPrime(int a) {
 
-        for (int i=2; i<a;i++){
+        for (int i = 2; i < a; i++) {
 
-            if (a%i==0){
+            if (a % i == 0) {
                 return false;
             }
 
-        }return true;
+        }
+        return true;
 
     }
 
 
     //количество простых чисел до переданного значения
     //вывод простых чисел до заданного значения
-    public static int CountOfPrimes(int a){
-        List<Integer> ListOfPrimes=new ArrayList<Integer>();
-        boolean flag=false;
-        int countPrime=0;//количество простых
+    public static int CountOfPrimes(int a) {
+        List<Integer> ListOfPrimes = new ArrayList<Integer>();
+        boolean flag = false;
+        int countPrime = 0;//количество простых
 
-        for (int i=2;i<a;i++){
-            flag=true;//изначально считает что число простое
-            for (int j=2;j<i;j++){//для каждого числа до введеного проверяет условие
-                if(i%j==0){
+        for (int i = 2; i < a; i++) {
+            flag = true;//изначально считает что число простое
+            for (int j = 2; j < i; j++) {//для каждого числа до введеного проверяет условие
+                if (i % j == 0) {
                     flag = false;//если число не простое выход из внутреннего цикла
                     break;
                 }
             }
             //если число оказывается простым, увеличивается счетчик и число добавляется в коллекцию
-            if (flag){
+            if (flag) {
                 countPrime++;
                 ListOfPrimes.add(i);
             }
